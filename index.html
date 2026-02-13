@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Testing</title>
+  <meta name="description" content="website percobaan idun" />
+
+  <!-- Google Font (Serif Klasik) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1c1c1c;
+      --secondary: #6b6b6b;
+      --accent: #8b6f47;
+      --bg: #f9f7f3;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav ul li a {
+      font-size: 14px;
+      color: var(--secondary);
+      transition: color 0.3s;
+    }
+
+    .nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--secondary);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Tentang */
+    .about {
+      background: var(--bg);
+    }
+
+    .about p {
+      max-width: 800px;
+      margin-top: 20px;
+      color: var(--secondary);
+    }
+
+    /* Portofolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .portfolio-item {
+      background: var(--white);
+      border: 1px solid #e5e5e5;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .portfolio-item div {
+      padding: 20px;
+    }
+
+    /* Skills */
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill span {
+      font-size: 14px;
+    }
+
+    .progress {
+      height: 6px;
+      background: #ddd;
+      margin-top: 8px;
+    }
+
+    .progress div {
+      height: 6px;
+      background: var(--accent);
+    }
+
+    /* Kontak */
+    .contact form {
+      max-width: 600px;
+      margin-top: 30px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    .contact button {
+      padding: 12px 30px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #e5e5e5;
+      font-size: 14px;
+      color: var(--secondary);
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .nav ul {
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">Saiidt</div>
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#about">Tentang Saya</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#skills">Keahlian</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <img src="sensei.png" alt="Foto Profil">
+    <h1>Web Developer & Designer</h1>
+    <p>Web Developer muda yang sukses</p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang mahasiswa yang bercita-cita menjadi seorang web developer terkenal, ini adalah website pertama yang saya buat sebagai testing, mohon kritik dan saran nya ya teman-teman :D.</p>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <h2>Portofolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="contoh web design.png" alt="Project 1">
+        <div>
+          <h3>Contoh Web Design Klasik</h3>
+          <p>Website company profile dengan desain klasik dan modern.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="contoh web design2.png" alt="Project 2">
+        <div>
+          <h3>Contoh Web Design Modern</h3>
+          <p>Landing page profesional dengan fokus konversi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Keahlian</h2>
+    <div class="skill">
+      <span>Web Development</span>
+      <div class="progress"><div style="width: 90%"></div></div>
+    </div>
+    <div class="skill">
+      <span>UI / UX Design</span>
+      <div class="progress"><div style="width: 80%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Backend Development</span>
+      <div class="progress"><div style="width: 75%"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Kontak</h2>
+    <p>Email: m.said.a.dly@gmail.com | WhatsApp: 082382732147</p>
+    <form>
+      <input type="text" placeholder="Nama">
+      <input type="email" placeholder="Email">
+      <textarea rows="4" placeholder="Pesan"></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Saiidt. "Hidup Jokowi."</p>
+</footer>
+
+</body>
+</html>
